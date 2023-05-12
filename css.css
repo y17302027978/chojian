@@ -1,0 +1,134 @@
+/*设置背景颜色 */
+body{
+    background-color: red;
+}
+/* 圆盘外层盒子 */
+.container{
+    width: 600px;
+    height: 600px;
+    margin: 50px auto;
+    background-color: red;
+    position: relative;
+
+}
+/* 设置转盘和指针 */
+.container>img{
+    width: 100%;
+}
+.top{
+    float: left;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -29px;
+    margin-top: -29px;
+    z-index: 1;
+}
+.pointer{
+    width: 36px;
+    height: 244px;
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    margin-left: -16px;
+    transition: all 6s;
+    transform-origin: 16px 0;
+}
+
+/* 设置按钮 */
+input{
+    border-radius: 20px 20px;
+    width: 100px;
+    height: 40px;
+    background-color: #ffff80;
+    display:block;
+    margin: 10px auto;
+}
+
+/* 输出抽奖情况的文本框 */
+.text{
+    width: 400px;
+    height: 16px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-top: 10px;
+    margin-left: -200px;
+    text-align: center;
+    opacity: 0;
+}
+
+/* 灯光的统一大小及绝对定位 */
+.size{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+/* 分别设置各个小灯的位置 */
+.box1{
+    left: 50%;
+    margin-left: -15px;
+    animation: myLight 2s infinite;
+}
+.box2{
+    left: 50%;
+    margin-left: -15px;
+    top: 95%;
+    animation: myLight 2s infinite;
+}
+.box3{
+    left: 97%;
+    margin-left: -15px;
+    top: 50%;
+    margin-top: -15px;
+    animation: myLight 2s infinite;
+}
+.box4{
+    margin-left: 3px;
+    top: 50%;
+    margin-top: -15px;
+    animation: myLight 2s infinite;
+}
+.box5{
+    margin-left: 85px;
+    top: 17%;
+    margin-top: -15px;
+    animation: myLight2 2s infinite;
+}
+.box6{
+    left: 68%;
+    margin-left: 76px;
+    top: 17%;
+    margin-top: -15px;
+    animation: myLight2 2s infinite;
+}
+.box7{
+    left: 68%;
+    margin-left: 76px;
+    top: 84%;
+    margin-top: -15px;
+    animation: myLight2 2s infinite;
+}
+.box8{
+    left: 1%;
+    margin-left: 76px;
+    background: blue;
+    top: 84%;
+    margin-top: -15px;
+    animation: myLight2 2s infinite;
+}
+
+/* 小灯的渐变颜色 */
+@keyframes myLight{
+    0%{background-image: radial-gradient(#FF0000, #be3625);}
+    50%{background-image: radial-gradient(yellow, orange); box-shadow: 0 0 6px yellow}
+    100%{background-image: radial-gradient(#FF0000, #be3625); }
+}
+@keyframes myLight2{
+    0%{background-image: radial-gradient(yellow, orange);box-shadow: 0 0 6px yellow}
+    50%{background-image: radial-gradient(#FF0000, #be3625);box-shadow: 0 0 0px yellow}
+    100%{background-image: radial-gradient(yellow, orange); box-shadow: 0 0 6px yellow}
+}
